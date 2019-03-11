@@ -129,7 +129,7 @@ else{
         }
         else echo '';
         ?>"
-        name="convertedtemp" size="14" maxlength="7" id="convertedtemp" >
+        name="convertedtemp" size="14" maxlength="7" id="convertedtemp" readonly>
         <select name="conversionunit">
         <option value="--Select--"<?php if($conUnit == "--Select--") echo ' selected="selected"';?>>--Select--</option>
             <option value="celsius"<?php if($conUnit == "celsius") echo ' selected="selected"';?>>Celsius</option>
