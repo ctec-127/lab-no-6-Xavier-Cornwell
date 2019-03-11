@@ -59,7 +59,7 @@ return $newtemp;
     // You need to develop the logic to convert the temperature based on the selections and input made
 
 } // end function
-
+$type='';
 // Logic to check for POST and grab data from $_POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Store the original temp and units in variables
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $originUnit = $_POST['originalunit'];
   } else {
 
-    $$originUnit = "";
+    $originUnit = "";
   } 
 
   if (isset($_POST['conversionunit'])){
@@ -129,7 +129,7 @@ else{
         }
         else echo '';
         ?>"
-        name="convertedtemp" size="14" maxlength="7" id="convertedtemp" readonly>
+        name="convertedtemp" size="14" maxlength="7" id="convertedtemp" >
         <select name="conversionunit">
         <option value="--Select--"<?php if($conUnit == "--Select--") echo ' selected="selected"';?>>--Select--</option>
             <option value="celsius"<?php if($conUnit == "celsius") echo ' selected="selected"';?>>Celsius</option>
