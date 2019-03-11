@@ -100,9 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!-- Form starts here -->
 <h1>Temperature Converter</h1>
 <h4>CTEC 127 - PHP with SQL 1</h4>
-<form method="POST" action="<?php if ($convertedTemp) {
-}
-echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <div class="group">
         <label for="temp">Temperature</label>
         <input type="text" value="<?php if (isset($_POST['originaltemp'])) {
